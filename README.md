@@ -10,7 +10,7 @@
 
  <p align="center">
 
- Niklas Nielsen mr awesome <br />
+ Niklas Nielsen MR. Awesome <br />
 
   </p>
 
