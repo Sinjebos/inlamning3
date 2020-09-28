@@ -10,9 +10,9 @@
 
  <p align="center">
 
- Arasto Sahbaei, co-founder & developer <br />
+ Niklas Nielsen mr awesome <br />
 
- Marcin Retek, co-founder & developer </p>
+  </p>
 
 
 
