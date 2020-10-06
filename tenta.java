@@ -2,6 +2,8 @@ import java.util.Scanner;
 public class tenta {
     static boolean tent = true;
     static boolean skip = true;
+    static boolean question1 = false;
+    static boolean question2 = false;
     static Scanner sc = new Scanner(System.in);
 
     public static void options1(){
@@ -21,6 +23,7 @@ public class tenta {
     }
 
     public static void switch1(){
+        System.out.println("Question 1: ");
         options1();
         switch(sc.next()){
             case "1":
@@ -31,6 +34,7 @@ public class tenta {
             break;
             case "3":
             System.out.println("Correct well done!");
+            question1 = true;
             break;
             case "4":
             System.out.println("noo wrong answer");
@@ -47,6 +51,7 @@ public class tenta {
 
     }
     public static void switch2(){
+        System.out.println("Question 2: ");
         options2();
         switch(sc.next()){
             case "1":
@@ -54,6 +59,7 @@ public class tenta {
             break;
             case "2":
             System.out.println("Yay good job! nailed it!");
+            question2 = true;
             break;
             case "3":
             System.out.println("Wrong answer!");
@@ -66,6 +72,20 @@ public class tenta {
             break;
         }
     }
+    public static void points(){
+       if(question1 && question2){
+           System.out.println("Well done you got 2/2 points");
+       }
+       if(question1 && !question2){
+        System.out.println("You got 1/2 points. Try again!");
+       } 
+       if(!question1 && !question2){
+        System.out.println("You got 0/2 points. Try again!");
+       }
+       if(!question1 && question2){
+        System.out.println("You got 1/2 points. Try again!");
+       }
+    }    
 
 
 
@@ -74,13 +94,9 @@ public class tenta {
         if(skip){
         switch2();
         }
-        else{
-            System.out.println("closing test");
-        }
-
+        points();
         }
     public static void main(String[] args) {
-            questions(); 
-            
+        questions(); 
        }
 }
