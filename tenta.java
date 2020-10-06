@@ -1,6 +1,7 @@
 import java.util.Scanner;
-
 public class tenta {
+    static boolean tent = true;
+    static boolean skip = true;
     static Scanner sc = new Scanner(System.in);
 
     public static void options1(){
@@ -18,7 +19,8 @@ public class tenta {
         System.out.println("[3] ArrayList String = new ArrayList<>(); ");
         System.out.println("[4] ArrayList String x = new Arraylist<>;");
     }
-    public static void questions(){
+
+    public static void switch1(){
         options1();
         switch(sc.next()){
             case "1":
@@ -34,32 +36,51 @@ public class tenta {
             System.out.println("noo wrong answer");
             break;
             case "5":
-            options2();
-            switch(sc.next()){
-                case "1":
-                System.out.println("oof so close but wrong! ");
-                break;
-                case "2":
-                System.out.println("Yay good job! nailed it!");
-                break;
-                case "3":
-                System.out.println("Wrong answer!");
-                break;
-                case "4": 
-                System.out.println("nono wrong answer");
-                break;
-                default:
-                System.out.println("input 1");
-                break;
-            }
+            switch2();
+            skip = false;
             break;
-
             default:
             System.out.println("invalid answer, input 1-4");
             break;
+
+        }
+
+    }
+    public static void switch2(){
+        options2();
+        switch(sc.next()){
+            case "1":
+            System.out.println("oof so close but wrong! ");
+            break;
+            case "2":
+            System.out.println("Yay good job! nailed it!");
+            break;
+            case "3":
+            System.out.println("Wrong answer!");
+            break;
+            case "4": 
+            System.out.println("nono wrong answer");
+            break;
+            default:
+            System.out.println("input 1");
+            break;
         }
     }
+
+
+
+    public static void questions(){
+        switch1();
+        if(skip){
+        switch2();
+        }
+        else{
+            System.out.println("closing test");
+        }
+
+        }
     public static void main(String[] args) {
-        questions();
-    }
+            questions(); 
+            
+       }
 }
