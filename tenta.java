@@ -1,9 +1,9 @@
-public class tenta extends tentafilerna {
-
+public class tenta{
     public static void main(String[] args) {
-        while(tent){
-        questions(); 
+    tentafilerna test = new tentafilerna();
+        while(test.tent){
+        test.questions();
         }
-        points();
+        test.points();
        }
 }

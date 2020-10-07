@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class tentafilerna {
-    static boolean tent = true;
+    public boolean tent = true;
     static boolean skip = true;
     static boolean question1 = false;
     static boolean question2 = false;
@@ -22,7 +22,7 @@ public class tentafilerna {
         System.out.println("[4] ArrayList String x = new Arraylist<>;");
     }
 
-    public static void switch1(){
+    public void switch1(){
         System.out.println("Question 1: ");
         options1();
         switch(sc.next()){
@@ -54,7 +54,7 @@ public class tentafilerna {
         }
 
     }
-    public static void switch2(){
+    public void switch2(){
         System.out.println("Question 2: ");
         options2();
         switch(sc.next()){
@@ -76,24 +76,21 @@ public class tentafilerna {
             break;
         }
     }
-    public static void points(){
+    public void points(){
        if(question1 && question2){
            System.out.println("Well done you got 2/2 points");
        }
-       if(question1 && !question2){
+       if(question1 || question2){
         System.out.println("You got 1/2 points. Try again!");
        } 
-       if(!question1 && !question2){
-        System.out.println("You got 0/2 points. Try again!");
-       }
-       if(!question1 && question2){
-        System.out.println("You got 1/2 points. Try again!");
+       else{
+           System.out.println("You got 0/2 points. Try again");
        }
     }    
 
 
 
-    public static void questions(){
+    public void questions(){
         switch1();
         if(skip){
         switch2();
